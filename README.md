@@ -1,3 +1,123 @@
+
+# 🔎 Retrieval-Augmented Generation (RAG)
+
+### Python · Jupyter Notebook · BM25 · Embeddings · OpenAI API
+
+A university project developed as part of the **Artificial Intelligence (CSS-4007)** course at **Narxoz University**.
+
+This project explores how Retrieval-Augmented Generation (RAG) helps language models answer questions using information retrieved from documents.
+
+---
+
+## 📌 Project Overview
+
+The project focuses on comparing different information retrieval methods and evaluating their impact on AI-generated answers.
+
+Main objectives:
+
+- Understand how RAG systems work.
+- Compare keyword-based and semantic search.
+- Retrieve relevant information from documents.
+- Integrate retrieval methods with an LLM.
+- Evaluate retrieval and answer quality.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Programming | Python |
+| Environment | Jupyter Notebook |
+| Keyword Search | BM25 |
+| Semantic Search | EmbeddingGemma |
+| AI Integration | OpenAI API |
+| Libraries | rank_bm25, sentence-transformers |
+| Data Formats | JSON, JSONL |
+| Version Control | Git, GitHub |
+
+---
+
+## ⚙️ Project Components
+
+### 1. Keyword-Based Retrieval (BM25)
+
+- Calculate document relevance using BM25.
+- Retrieve documents based on keyword matching.
+- Rank documents by relevance scores.
+
+### 2. Semantic Retrieval (Embeddings)
+
+- Generate document embeddings using EmbeddingGemma.
+- Calculate cosine similarity.
+- Retrieve documents based on semantic meaning.
+
+### 3. RAG Pipeline
+
+- Retrieve relevant document chunks.
+- Add retrieved context to the model prompt.
+- Generate answers using an LLM.
+- Compare responses with reference answers.
+
+### 4. Performance Evaluation
+
+Compare three approaches:
+
+| Approach | Description |
+|---|---|
+| LLM Only | Answers questions without retrieved context |
+| BM25 RAG | Uses keyword-based document retrieval |
+| Embedding RAG | Uses semantic document retrieval |
+
+Evaluation focuses on retrieval relevance, answer accuracy, and identifying retrieval versus generation errors.
+
+---
+
+## 🔄 RAG Workflow
+
+```mermaid
+flowchart TD
+    A[User Question] --> B[Document Retrieval]
+    B --> C{Retrieval Method}
+    C --> D[BM25]
+    C --> E[EmbeddingGemma]
+    D --> F[Relevant Document Chunks]
+    E --> F
+    F --> G[Build Prompt with Context]
+    G --> H[OpenAI Language Model]
+    H --> I[Generated Answer]
+```
+
+---
+
+## 🎯 Skills Demonstrated
+
+- Python programming
+- Information retrieval
+- Natural language processing
+- Semantic search
+- RAG pipeline development
+- Data processing
+- AI model evaluation
+- Analytical problem-solving
+
+---
+
+## 📚 Academic Information
+
+**University:** Narxoz University  
+**Course:** CSS-4007 — Artificial Intelligence  
+**Assignment:** Homework 3 — Context Engineering  
+**Type:** Individual University Assignment
+
+---
+
+## 📄 Original Assignment
+
+The original assignment instructions and requirements are provided below.
+
+---
+
 # HW3 — Two retrievers and a model: what RAG actually sends
 
 **Course:** CSS-4007 · Artificial Intelligence · Narxoz University
